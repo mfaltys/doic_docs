@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Milestone.1s on doic-docs</title>
+    <link>https://mfaltys.github.io/doic_docs/milestone.1/index.xml</link>
+    <description>Recent content in Milestone.1s on doic-docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Released under the MIT license</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
+    <atom:link href="https://mfaltys.github.io/doic_docs/milestone.1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Milestone 1</title>
+      <link>https://mfaltys.github.io/doic_docs/milestone.1/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/doic_docs/milestone.1/</guid>
+      <description>
+
+&lt;h2 id=&#34;executive-summary&#34;&gt;Executive Summary&lt;/h2&gt;
+
+&lt;p&gt;Many industry malware detection tools (used in the workplace or for personal use)
+are either platform specific, intrusive, or high overhead and need to be
+maintained. Doic is a malware detection tool which plans to overcome these
+problems in a small, easy to deploy package.&lt;/p&gt;
+
+&lt;h3 id=&#34;goals-and-objectives&#34;&gt;Goals and Objectives&lt;/h3&gt;
+
+&lt;p&gt;Doic plans to combat the problems outined in the executive summary in the
+following ways:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Easy to impliment&lt;/strong&gt; If its run as the main DNS server it can detect
+malicious content without having to run any client-side software. This also
+means it can be deployed in a large corperate environment just as easily as
+on a personal computer.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Low overhead&lt;/strong&gt;. Doic is written in golang and the entire system can be deployed
+on most architectures in under 10MB. The tool is also statically compiled
+meaning no extensive dependencies, it is shipped with everything it needs to
+run.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Non intrusive&lt;/strong&gt;. Being non-client side, it does not run in the background
+therefore is no-overhead on your workstations. Doic has no annoying popops and
+will only redirect traffic if told to do so.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Doic is and always will remain open-source. After version 1.0 is released we
+encourage critique and peer reviews. If you have any questions or feedback feel
+free to contact us or better yet submit a PR.&lt;br /&gt;
+Doic will continue to be fast and reliable, DNS requests passing through the
+tool add a negligible amount of time to the request and its probably faster than
+your current firewall implimented DNS server. Doic is tested for errors with
+unit tests and function test being constantly ran against the code over on our
+projects &lt;a href=&#34;https://travis-ci.org/mfaltys/doic&#34;&gt;travis page&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/trickedbyabusiness2.png&#34; alt=&#34;granttpro is not free&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;project-risks&#34;&gt;Project Risks&lt;/h2&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Risk name&lt;/th&gt;
+&lt;th&gt;Impact&lt;/th&gt;
+&lt;th&gt;Likelihood&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Domain list availability (16)&lt;/td&gt;
+&lt;td&gt;8&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;If open doimain lists are hard to get a hold of proving malicious intent becomes difficult&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Alerting system (9)&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;Finding a way to alert users could take a fair amount of time with one developer&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Procrastination (12)&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;I always pull through with enough coffee&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Unknown DNS issues (12)&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;If clients try an unsupported DNS call it will not resolve but instead return a DNS SERVFAIL and timeout if not handled correctly. I dont know what I dont know&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Unit testing (8)&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;Its difficut to unit test DNS calls in go, feature testing is much easier. It could have unknown negative side effects&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&#34;application-requirements&#34;&gt;Application Requirements&lt;/h2&gt;
+
+&lt;h3 id=&#34;user-stories&#34;&gt;User Stories&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;As an administrator, I want to add new blacklisted domains to keep my clients
+safe.&lt;/li&gt;
+&lt;li&gt;As an end-user, I want non-intrusive malware indicators so I am not
+distracted.&lt;/li&gt;
+&lt;li&gt;As an administrator, I want to be alerted of malicious intent to keep my users
+safe.&lt;/li&gt;
+&lt;li&gt;As an administrator, I want to follow traffic on a per-ip basis to track down
+malicious software swiftly.&lt;/li&gt;
+&lt;li&gt;As an organizational manager, I want an indicator of compromise(IOC) deployed rapidly to cut down on
+man-hour costs.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;acceptance-criteria&#34;&gt;Acceptance Criteria&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Administrator can add blacklisted domain databases via supplied data input
+tool&lt;/li&gt;
+&lt;li&gt;Administrator can add a single blacklisted domain via API&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Administrator can add a batch of blacklisted domain via API&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Administrator will be alerted of an attempted malicious domain via Email&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Administrator will be able to follow traffic on a per-ip basis via HTTP API&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Administrator will be able to set up doic swiftly via sane default configs&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;End-user will be able to browse freely without interruptions/client pop-ups&lt;br /&gt;&lt;/li&gt;
+&lt;li&gt;Organization manager will be able to obtain doic free of cost&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/doic_use_case.png&#34; alt=&#34;doic use cases&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;used-technologies&#34;&gt;Used Technologies&lt;/h3&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Resource&lt;/th&gt;
+&lt;th&gt;Dr. Hale needed?&lt;/th&gt;
+&lt;th&gt;Investigating Team member&lt;/th&gt;
+&lt;th&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Golang&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Matthew&lt;/td&gt;
+&lt;td&gt;Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Redis&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Matthew&lt;/td&gt;
+&lt;td&gt;Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Golang DNS library&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Matthew&lt;/td&gt;
+&lt;td&gt;miekg/dns is an open source DNS library for golang &lt;a href=&#34;https://github.com/miekg/dns#users&#34;&gt;used by many leaders in the field&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;Travis CI&lt;/td&gt;
+&lt;td&gt;No&lt;/td&gt;
+&lt;td&gt;Matthew&lt;/td&gt;
+&lt;td&gt;Travis is a CI tool used by many industry leaders to test and release code. It is free to use for open-source projects.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;We have also set up a &lt;a href=&#34;https://trello.com/b/5KMHrR6L/project-requirement-clicitation-cybr4580&#34;&gt;trello board&lt;/a&gt; for sprint based activity tracking/planning.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
