@@ -188,14 +188,47 @@ tool&lt;/li&gt;
     </item>
     
     <item>
-      <title>Milestone 1</title>
+      <title>Milestone 2</title>
       <link>https://mfaltys.github.io/doic_docs/milestone.2/</link>
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
       
       <guid>https://mfaltys.github.io/doic_docs/milestone.2/</guid>
       <description>
 
-&lt;h2 id=&#34;todo&#34;&gt;TODO&lt;/h2&gt;
+&lt;h2 id=&#34;architectural-diagram&#34;&gt;Architectural Diagram&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/doic_architectural_diagram_v2.png&#34; alt=&#34;architectural diagram&#34; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;components&#34;&gt;Components&lt;/h3&gt;
+
+&lt;p&gt;The following components are used in this tool:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;DOIC&lt;/strong&gt;: The main tool itself, comprised of components to parse the DNS
+request recieved, check the requested domain against the malicious domain list
+(in redis), and resolving the request upstream if it is deemed safe.&lt;br /&gt;
+Listens on &lt;code&gt;TCP:53&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Redis DB&lt;/strong&gt;: The redis db (listens on &lt;code&gt;TCP:6379&lt;/code&gt;) containing the following data sets:&lt;br /&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;blacklist:domain&lt;/code&gt;: contains a &lt;a href=&#34;https://redis.io/commands/set&#34;&gt;redis set&lt;/a&gt;
+of blacklisted domains.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;client:list&lt;/code&gt;: contains the &lt;a href=&#34;https://redis.io/commands/set&#34;&gt;redis set&lt;/a&gt; of
+clients registered in the system.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;client:&amp;lt;client_ip&amp;gt;&lt;/code&gt;: contains the &lt;a href=&#34;https://redis.io/commands/rpush&#34;&gt;ordered redis set&lt;/a&gt;
+of domains (with timestamp) that the specified client has browsed.&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DOIC Cli&lt;/strong&gt;: The doic cli is a command line tool used to browse connected
+users, browse connected users history, and enter domains into the blacklisted
+domain list.  The cli connect to redis on its configured port (default
+&lt;code&gt;TCP:6379&lt;/code&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;activity-diagram&#34;&gt;Activity Diagram&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/doic_activity_diagram.png&#34; alt=&#34;activity diagram&#34; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;user-story-relization&#34;&gt;User story relization&lt;/h2&gt;
 </description>
     </item>
     
