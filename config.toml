@@ -49,6 +49,11 @@ canonifyurls = true
 	weight = 0
 
 [[menu.main]]
+	name   = "Configuration"
+	url    = "configuration"
+	weight = 10
+
+[[menu.main]]
 	name   = "Milestone 1"
 	url    = "milestone.1"
 	weight = 10

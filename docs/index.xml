@@ -11,6 +11,20 @@
     <atom:link href="https://mfaltys.github.io/doic_docs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Doic Configuration</title>
+      <link>https://mfaltys.github.io/doic_docs/configuration/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/doic_docs/configuration/</guid>
+      <description>
+
+&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
+
+&lt;p&gt;TODO&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Milestone 1</title>
       <link>https://mfaltys.github.io/doic_docs/milestone.1/</link>
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>

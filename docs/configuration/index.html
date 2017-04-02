@@ -9,18 +9,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=10" />
-    <title>Milestone 2 - doic-docs</title>
+    <title>Doic Configuration - doic-docs</title>
     <meta name="generator" content="Hugo 0.18.1" />
 
     
     <meta name="description" content="Doic documentation.">
     
-    <link rel="canonical" href="https://mfaltys.github.io/doic_docs/milestone.2/">
+    <link rel="canonical" href="https://mfaltys.github.io/doic_docs/configuration/">
     
     <meta name="author" content="Matthew Faltys">
     
 
-    <meta property="og:url" content="https://mfaltys.github.io/doic_docs/milestone.2/">
+    <meta property="og:url" content="https://mfaltys.github.io/doic_docs/configuration/">
     <meta property="og:title" content="doic-docs">
     <meta property="og:image" content="https://mfaltys.github.io/doic_docs/img/logo.png">
     <meta name="apple-mobile-web-app-title" content="doic-docs">
@@ -97,7 +97,7 @@
     </div>
     <div class="stretch">
       <div class="title">
-        Milestone 2
+        Doic Configuration
       </div>
     </div>
 
@@ -291,82 +291,13 @@
 
 	<article class="article">
 		<div class="wrapper">
-			<h1>Milestone 2 </h1>
+			<h1>Doic Configuration </h1>
 
 			
 
-<h2 id="architectural-diagram">Architectural Diagram</h2>
+<h2 id="configuration">Configuration</h2>
 
-<p><img src="https://s3.amazonaws.com/unixvoid-blog/doic_architectural_diagram_v2.png" alt="architectural diagram" /></p>
-
-<h3 id="components">Components</h3>
-
-<p>The following components are used in this tool:</p>
-
-<ul>
-<li><strong>DOIC</strong>: The main tool itself, comprised of components to parse the DNS
-request recieved, check the requested domain against the malicious domain list
-(in redis), and resolving the request upstream if it is deemed safe.<br />
-Listens on <code>TCP:53</code>.</li>
-<li><strong>Redis DB</strong>: The redis db (listens on <code>TCP:6379</code>) containing the following data sets:<br />
-
-<ul>
-<li><code>blacklist:domain</code>: contains a <a href="https://redis.io/commands/set">redis set</a>
-of blacklisted domains.</li>
-<li><code>client:list</code>: contains the <a href="https://redis.io/commands/set">redis set</a> of
-clients registered in the system.</li>
-<li><code>client:&lt;client_ip&gt;</code>: contains the <a href="https://redis.io/commands/rpush">ordered redis set</a>
-of domains (with timestamp) that the specified client has browsed.<br /></li>
-</ul></li>
-<li><strong>DOIC Cli</strong>: The doic cli is a command line tool used to browse connected
-users, browse connected users history, and enter domains into the blacklisted
-domain list.  The cli connect to redis on its configured port (default
-<code>TCP:6379</code>).</li>
-</ul>
-
-<h2 id="activity-diagram">Activity Diagram</h2>
-
-<h3 id="add-new-blacklisted-domain">Add new blacklisted domain</h3>
-
-<ul>
-<li>As an administrator, I want to add new blacklisted domains to keep my client
-safe.
-<img src="https://s3.amazonaws.com/unixvoid-blog/doic_activity_diagram_1_blacklist_domain.png" alt="activity diagram 1" /></li>
-</ul>
-
-<h3 id="track-client-traffic">Track client traffic</h3>
-
-<ul>
-<li>As an administrator, I want to follow traffic on a per-ip basis to track down
-malicious software swiftly.
-<img src="https://s3.amazonaws.com/unixvoid-blog/doic_activity_diagram_2_client_traffic.png" alt="activity diagram 2" /></li>
-</ul>
-
-<h3 id="malicious-traffic-alerting">Malicious traffic alerting</h3>
-
-<ul>
-<li>As an administrator, I want to be alerted of malicious intent to keep my users
-safe.
-<img src="https://s3.amazonaws.com/unixvoid-blog/doic_activity_diagram_3_alerting.png" alt="activity diagram 3" /></li>
-</ul>
-
-<h2 id="user-story-relization">User story relization</h2>
-
-<p>The following resources will be used in demoing doic and the doic_cli:</p>
-
-<ul>
-<li><a href="https://cryo.unixvoid.com/bin/doic/">browse doic resources</a><br /></li>
-<li><a href="https://cryo.unixvoid.com/bin/doic/doic-latest-linux-amd64">doic</a><br /></li>
-<li><a href="https://cryo.unixvoid.com/bin/doic/doic_cli-latest-linux-amd64">doic_cli</a><br /></li>
-</ul>
-
-<h2 id="next-milestone-planning">Next milestone planning</h2>
-
-<p>The next milestone has been planned and is in the &lsquo;Selected For
-Development/Sprint TODO&rsquo; in <a href="https://trello.com/b/5KMHrR6L/doic">trello</a>.<br />
-Please note that is is tentative and ever changing as the current sprint work is
-wrapping up now and we are phasing in the next sprint.  The cards will move even
-if the &lsquo;current progress&rsquo; is not tracked.</p>
+<p>TODO</p>
 
 
 			<aside class="copyright" role="note">
@@ -385,34 +316,18 @@ if the &lsquo;current progress&rsquo; is not tracked.</p>
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://mfaltys.github.io/doic_docs/milestone.1/" title="Milestone 1">
-        <span class="direction">
-          Previous
-        </span>
-        <div class="page">
-          <div class="button button-previous" role="button" aria-label="Previous">
-            <i class="icon icon-back"></i>
-          </div>
-          <div class="stretch">
-            <div class="title">
-              Milestone 1
-            </div>
-          </div>
-        </div>
-      </a>
-  
   </div>
 
   <div class="next">
   
-      <a href="https://mfaltys.github.io/doic_docs/" title="DNS based IOC">
+      <a href="https://mfaltys.github.io/doic_docs/milestone.1/" title="Milestone 1">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              DNS based IOC
+              Milestone 1
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">
