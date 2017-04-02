@@ -299,13 +299,48 @@
 
 				
 
-<h1 id="doic">Doic</h1>
-
 <p><a href="https://travis-ci.org/mfaltys/doic"><img src="https://travis-ci.org/mfaltys/doic.svg?branch=master" alt="Build Status (Travis)" /></a><br />
 Doic is a DNS based indicator of compromise (IOC) written in go.  This tool is designed to be a very low
 overhead plug-and-play approach to implimenting an IOC for organizational or
 personal use.  If you want to track our day-to-day activities, check out our
 <a href="https://trello.com/b/5KMHrR6L/project-requirement-clicitation-cybr4580">trello board</a>.</p>
+
+<h2 id="using-doic">Using doic</h2>
+
+<h3 id="getting-precompiled-binaries">Getting precompiled binaries</h3>
+
+<p>This project pushes up a binary on every project commit and tag.
+You can find these binaries in the following locations (note we only pre compile
+for 64 bit linux architectures):<br />
+<a href="https://cryo.unixvoid.com/bin/doic/">browse binaries</a><br />
+<a href="https://cryo.unixvoid.com/bin/doic/doic-latest-linux-amd64">latest doic</a><br />
+<a href="https://cryo.unixvoid.com/bin/doic/doic_cli-latest-linux-amd64">latest doic_cli</a></p>
+
+<h3 id="compiling-from-source">Compiling from source</h3>
+
+<p>Doic uses Make for compilation/testing.  Use the following commands to buid doic
+from source.</p>
+
+<ul>
+<li>First make sure you have golang installed and configured</li>
+<li>To pull all dependencies use <code>make dependencies</code></li>
+<li>To build dynamically use <code>make</code> or <code>make doic</code>
+
+<ul>
+<li>The dynamically compiled binary will end up in the <code>bin/</code> directory</li>
+</ul></li>
+<li>To build statically use <code>make stat</code>
+
+<ul>
+<li>The statically compiled binary will end up in the <code>bin/</code> directory</li>
+</ul></li>
+<li>To build the cli use <code>make stat_cli</code>
+
+<ul>
+<li>The portable binary will end up in the <code>bin/</code> directory</li>
+</ul></li>
+<li>To clean up all compiled binaries use <code>make clean</code></li>
+</ul>
 
 			
 

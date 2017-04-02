@@ -26,6 +26,7 @@ The following components are used in this tool:
   domain list.  The cli connect to redis on its configured port (default
   `TCP:6379`).
 
+
 ## Activity Diagram
 
 ### Add new blacklisted domain
@@ -42,6 +43,7 @@ The following components are used in this tool:
 - As an administrator, I want to be alerted of malicious intent to keep my users
   safe.
 ![activity diagram 3](https://s3.amazonaws.com/unixvoid-blog/doic_activity_diagram_3_alerting.png)
+
 
 ## User story relization
 The following resources will be used in demoing doic and the doic_cli:  
