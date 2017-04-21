@@ -7,33 +7,33 @@ weight: 10
 ## Executive Summary
 Many industry malware detection tools (used in the workplace or for personal use)
 are either platform specific, intrusive, or high overhead and need to be
-maintained. Doic is a malware detection tool which plans to overcome these
+maintained. Redns is a malware detection tool which plans to overcome these
 problems in a small, easy to deploy package.  
 
 ### Goals and Objectives
-Doic plans to combat the problems outined in the executive summary in the
+Redns plans to combat the problems outined in the executive summary in the
 following ways:
 
 - **Easy to impliment** If its run as the main DNS server it can detect
   malicious content without having to run any client-side software. This also
   means it can be deployed in a large corperate environment just as easily as 
   on a personal computer.
-- **Low overhead**. Doic is written in golang and the entire system can be deployed
+- **Low overhead**. Redns is written in golang and the entire system can be deployed
   on most architectures in under 10MB. The tool is also statically compiled
   meaning no extensive dependencies, it is shipped with everything it needs to
   run.
 - **Non intrusive**. Being non-client side, it does not run in the background
-  therefore is no-overhead on your workstations. Doic has no annoying popops and
+  therefore is no-overhead on your workstations. Redns has no annoying popops and
   will only redirect traffic if told to do so.
 
-Doic is and always will remain open-source. After version 1.0 is released we
+Redns is and always will remain open-source. After version 1.0 is released we
 encourage critique and peer reviews. If you have any questions or feedback feel
 free to contact us or better yet submit a PR.  
-Doic will continue to be fast and reliable, DNS requests passing through the
+Redns will continue to be fast and reliable, DNS requests passing through the
 tool add a negligible amount of time to the request and its probably faster than
-your current firewall implimented DNS server. Doic is tested for errors with
+your current firewall implimented DNS server. Redns is tested for errors with
 unit tests and function test being constantly ran against the code over on our
-projects [travis page](https://travis-ci.org/mfaltys/doic).
+projects [travis page](https://travis-ci.org/mfaltys/redns).
 
 ![granttpro is not free](https://s3.amazonaws.com/unixvoid-blog/trickedbyabusiness2.png)
 
@@ -69,12 +69,12 @@ projects [travis page](https://travis-ci.org/mfaltys/doic).
 - Administrator can add a batch of blacklisted domain via API  
 - Administrator will be alerted of an attempted malicious domain via Email  
 - Administrator will be able to follow traffic on a per-ip basis via HTTP API  
-- Administrator will be able to set up doic swiftly via sane default configs  
+- Administrator will be able to set up redns swiftly via sane default configs  
 - End-user will be able to browse freely without interruptions/client pop-ups  
-- Organization manager will be able to obtain doic free of cost  
+- Organization manager will be able to obtain redns free of cost  
 
 ### Use Cases
-![doic use cases](https://s3.amazonaws.com/unixvoid-blog/doic_use_case.png)
+![redns use cases](https://s3.amazonaws.com/unixvoid-blog/redns_use_case.png)
 
 ### Used Technologies
 |Resource  | Dr. Hale needed? | Investigating Team member | Description |

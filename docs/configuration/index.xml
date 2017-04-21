@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Configurations on doic-docs</title>
-    <link>https://mfaltys.github.io/doic_docs/configuration/index.xml</link>
-    <description>Recent content in Configurations on doic-docs</description>
+    <title>Configurations on redns-docs</title>
+    <link>https://mfaltys.github.io/redns_docs/configuration/</link>
+    <description>Recent content in Configurations on redns-docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Released under the MIT license</copyright>
     <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
-    <atom:link href="https://mfaltys.github.io/doic_docs/configuration/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://mfaltys.github.io/redns_docs/configuration/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
-      <title>Doic Configuration</title>
-      <link>https://mfaltys.github.io/doic_docs/configuration/</link>
+      <title>Redns Configuration</title>
+      <link>https://mfaltys.github.io/redns_docs/configuration/index/</link>
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
       
-      <guid>https://mfaltys.github.io/doic_docs/configuration/</guid>
-      <description>
-
-&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
-
-&lt;p&gt;TODO&lt;/p&gt;
-</description>
+      <guid>https://mfaltys.github.io/redns_docs/configuration/index/</guid>
+      <description>Configuration TODO</description>
     </item>
     
   </channel>

@@ -1,340 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>doic-docs</title>
-    <link>https://mfaltys.github.io/doic_docs/index.xml</link>
-    <description>Recent content on doic-docs</description>
+    <title>redns-docs</title>
+    <link>https://mfaltys.github.io/redns_docs/</link>
+    <description>Recent content on redns-docs</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Released under the MIT license</copyright>
     <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
-    <atom:link href="https://mfaltys.github.io/doic_docs/index.xml" rel="self" type="application/rss+xml" />
     
-    <item>
-      <title>Doic Configuration</title>
-      <link>https://mfaltys.github.io/doic_docs/configuration/</link>
-      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
-      
-      <guid>https://mfaltys.github.io/doic_docs/configuration/</guid>
-      <description>
-
-&lt;h2 id=&#34;configuration&#34;&gt;Configuration&lt;/h2&gt;
-
-&lt;p&gt;TODO&lt;/p&gt;
-</description>
-    </item>
+	<atom:link href="https://mfaltys.github.io/redns_docs/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Milestone 1</title>
-      <link>https://mfaltys.github.io/doic_docs/milestone.1/</link>
+      <link>https://mfaltys.github.io/redns_docs/milestone.1/index/</link>
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
       
-      <guid>https://mfaltys.github.io/doic_docs/milestone.1/</guid>
-      <description>
-
-&lt;h2 id=&#34;executive-summary&#34;&gt;Executive Summary&lt;/h2&gt;
-
-&lt;p&gt;Many industry malware detection tools (used in the workplace or for personal use)
-are either platform specific, intrusive, or high overhead and need to be
-maintained. Doic is a malware detection tool which plans to overcome these
-problems in a small, easy to deploy package.&lt;/p&gt;
-
-&lt;h3 id=&#34;goals-and-objectives&#34;&gt;Goals and Objectives&lt;/h3&gt;
-
-&lt;p&gt;Doic plans to combat the problems outined in the executive summary in the
-following ways:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Easy to impliment&lt;/strong&gt; If its run as the main DNS server it can detect
-malicious content without having to run any client-side software. This also
-means it can be deployed in a large corperate environment just as easily as
-on a personal computer.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Low overhead&lt;/strong&gt;. Doic is written in golang and the entire system can be deployed
-on most architectures in under 10MB. The tool is also statically compiled
-meaning no extensive dependencies, it is shipped with everything it needs to
-run.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Non intrusive&lt;/strong&gt;. Being non-client side, it does not run in the background
-therefore is no-overhead on your workstations. Doic has no annoying popops and
-will only redirect traffic if told to do so.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Doic is and always will remain open-source. After version 1.0 is released we
-encourage critique and peer reviews. If you have any questions or feedback feel
-free to contact us or better yet submit a PR.&lt;br /&gt;
-Doic will continue to be fast and reliable, DNS requests passing through the
-tool add a negligible amount of time to the request and its probably faster than
-your current firewall implimented DNS server. Doic is tested for errors with
-unit tests and function test being constantly ran against the code over on our
-projects &lt;a href=&#34;https://travis-ci.org/mfaltys/doic&#34;&gt;travis page&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/trickedbyabusiness2.png&#34; alt=&#34;granttpro is not free&#34; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&#34;project-risks&#34;&gt;Project Risks&lt;/h2&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Risk name&lt;/th&gt;
-&lt;th&gt;Impact&lt;/th&gt;
-&lt;th&gt;Likelihood&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Domain list availability (16)&lt;/td&gt;
-&lt;td&gt;8&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;If open doimain lists are hard to get a hold of proving malicious intent becomes difficult&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Alerting system (9)&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;Finding a way to alert users could take a fair amount of time with one developer&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Procrastination (12)&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;I always pull through with enough coffee&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Unknown DNS issues (12)&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;If clients try an unsupported DNS call it will not resolve but instead return a DNS SERVFAIL and timeout if not handled correctly. I dont know what I dont know&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Unit testing (8)&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;4&lt;/td&gt;
-&lt;td&gt;Its difficut to unit test DNS calls in go, feature testing is much easier. It could have unknown negative side effects&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h2 id=&#34;application-requirements&#34;&gt;Application Requirements&lt;/h2&gt;
-
-&lt;h3 id=&#34;user-stories&#34;&gt;User Stories&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;As an administrator, I want to add new blacklisted domains to keep my clients
-safe.&lt;/li&gt;
-&lt;li&gt;As an end-user, I want non-intrusive malware indicators so I am not
-distracted.&lt;/li&gt;
-&lt;li&gt;As an administrator, I want to be alerted of malicious intent to keep my users
-safe.&lt;/li&gt;
-&lt;li&gt;As an administrator, I want to follow traffic on a per-ip basis to track down
-malicious software swiftly.&lt;/li&gt;
-&lt;li&gt;As an organizational manager, I want an indicator of compromise(IOC) deployed rapidly to cut down on
-man-hour costs.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;acceptance-criteria&#34;&gt;Acceptance Criteria&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Administrator can add blacklisted domain databases via supplied data input
-tool&lt;/li&gt;
-&lt;li&gt;Administrator can add a single blacklisted domain via API&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Administrator can add a batch of blacklisted domain via API&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Administrator will be alerted of an attempted malicious domain via Email&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Administrator will be able to follow traffic on a per-ip basis via HTTP API&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Administrator will be able to set up doic swiftly via sane default configs&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;End-user will be able to browse freely without interruptions/client pop-ups&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;Organization manager will be able to obtain doic free of cost&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;use-cases&#34;&gt;Use Cases&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/doic_use_case.png&#34; alt=&#34;doic use cases&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;used-technologies&#34;&gt;Used Technologies&lt;/h3&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Resource&lt;/th&gt;
-&lt;th&gt;Dr. Hale needed?&lt;/th&gt;
-&lt;th&gt;Investigating Team member&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Golang&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;Matthew&lt;/td&gt;
-&lt;td&gt;Go is an open source programming language that makes it easy to build simple, reliable, and efficient software.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Redis&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;Matthew&lt;/td&gt;
-&lt;td&gt;Redis is an open source (BSD licensed), in-memory data structure store, used as a database, cache and message broker.&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Golang DNS library&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;Matthew&lt;/td&gt;
-&lt;td&gt;miekg/dns is an open source DNS library for golang &lt;a href=&#34;https://github.com/miekg/dns#users&#34;&gt;used by many leaders in the field&lt;/a&gt;&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;Travis CI&lt;/td&gt;
-&lt;td&gt;No&lt;/td&gt;
-&lt;td&gt;Matthew&lt;/td&gt;
-&lt;td&gt;Travis is a CI tool used by many industry leaders to test and release code. It is free to use for open-source projects.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;We have also set up a &lt;a href=&#34;https://trello.com/b/5KMHrR6L/project-requirement-clicitation-cybr4580&#34;&gt;trello board&lt;/a&gt; for sprint based activity tracking/planning.&lt;/p&gt;
-</description>
+      <guid>https://mfaltys.github.io/redns_docs/milestone.1/index/</guid>
+      <description>Executive Summary Many industry malware detection tools (used in the workplace or for personal use) are either platform specific, intrusive, or high overhead and need to be maintained. Redns is a malware detection tool which plans to overcome these problems in a small, easy to deploy package.
+Goals and Objectives Redns plans to combat the problems outined in the executive summary in the following ways:
+ Easy to impliment If its run as the main DNS server it can detect malicious content without having to run any client-side software.</description>
     </item>
     
     <item>
       <title>Milestone 2</title>
-      <link>https://mfaltys.github.io/doic_docs/milestone.2/</link>
+      <link>https://mfaltys.github.io/redns_docs/milestone.2/index/</link>
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
       
-      <guid>https://mfaltys.github.io/doic_docs/milestone.2/</guid>
-      <description>
-
-&lt;h2 id=&#34;architectural-diagram&#34;&gt;Architectural Diagram&lt;/h2&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/doic_architectural_diagram_v2.png&#34; alt=&#34;architectural diagram&#34; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;components&#34;&gt;Components&lt;/h3&gt;
-
-&lt;p&gt;The following components are used in this tool:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;DOIC&lt;/strong&gt;: The main tool itself, comprised of components to parse the DNS
-request recieved, check the requested domain against the malicious domain list
-(in redis), and resolving the request upstream if it is deemed safe.&lt;br /&gt;
-Listens on &lt;code&gt;TCP:53&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Redis DB&lt;/strong&gt;: The redis db (listens on &lt;code&gt;TCP:6379&lt;/code&gt;) containing the following data sets:&lt;br /&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;blacklist:domain&lt;/code&gt;: contains a &lt;a href=&#34;https://redis.io/commands/set&#34;&gt;redis set&lt;/a&gt;
-of blacklisted domains.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;client:list&lt;/code&gt;: contains the &lt;a href=&#34;https://redis.io/commands/set&#34;&gt;redis set&lt;/a&gt; of
-clients registered in the system.&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;client:&amp;lt;client_ip&amp;gt;&lt;/code&gt;: contains the &lt;a href=&#34;https://redis.io/commands/rpush&#34;&gt;ordered redis set&lt;/a&gt;
-of domains (with timestamp) that the specified client has browsed.&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;DOIC Cli&lt;/strong&gt;: The doic cli is a command line tool used to browse connected
-users, browse connected users history, and enter domains into the blacklisted
-domain list.  The cli connect to redis on its configured port (default
-&lt;code&gt;TCP:6379&lt;/code&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;activity-diagram&#34;&gt;Activity Diagram&lt;/h2&gt;
-
-&lt;h3 id=&#34;add-new-blacklisted-domain&#34;&gt;Add new blacklisted domain&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;As an administrator, I want to add new blacklisted domains to keep my client
-safe.
-&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/doic_activity_diagram_1_blacklist_domain.png&#34; alt=&#34;activity diagram 1&#34; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;track-client-traffic&#34;&gt;Track client traffic&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;As an administrator, I want to follow traffic on a per-ip basis to track down
-malicious software swiftly.
-&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/doic_activity_diagram_2_client_traffic.png&#34; alt=&#34;activity diagram 2&#34; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;malicious-traffic-alerting&#34;&gt;Malicious traffic alerting&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;As an administrator, I want to be alerted of malicious intent to keep my users
-safe.
-&lt;img src=&#34;https://s3.amazonaws.com/unixvoid-blog/doic_activity_diagram_3_alerting.png&#34; alt=&#34;activity diagram 3&#34; /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;user-story-relization&#34;&gt;User story relization&lt;/h2&gt;
-
-&lt;p&gt;The following resources will be used in demoing doic and the doic_cli:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://cryo.unixvoid.com/bin/doic/&#34;&gt;browse doic resources&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cryo.unixvoid.com/bin/doic/doic-latest-linux-amd64&#34;&gt;doic&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://cryo.unixvoid.com/bin/doic/doic_cli-latest-linux-amd64&#34;&gt;doic_cli&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;next-milestone-planning&#34;&gt;Next milestone planning&lt;/h2&gt;
-
-&lt;p&gt;The next milestone has been planned and is in the &amp;lsquo;Selected For
-Development/Sprint TODO&amp;rsquo; in &lt;a href=&#34;https://trello.com/b/5KMHrR6L/doic&#34;&gt;trello&lt;/a&gt;.&lt;br /&gt;
-Please note that is is tentative and ever changing as the current sprint work is
-wrapping up now and we are phasing in the next sprint.  The cards will move even
-if the &amp;lsquo;current progress&amp;rsquo; is not tracked.&lt;/p&gt;
-</description>
+      <guid>https://mfaltys.github.io/redns_docs/milestone.2/index/</guid>
+      <description>Architectural Diagram Components The following components are used in this tool:
+ DOIC: The main tool itself, comprised of components to parse the DNS request recieved, check the requested domain against the malicious domain list (in redis), and resolving the request upstream if it is deemed safe.
+Listens on TCP:53. Redis DB: The redis db (listens on TCP:6379) containing the following data sets:
+ blacklist:domain: contains a redis set of blacklisted domains.</description>
+    </item>
+    
+    <item>
+      <title>Redns Configuration</title>
+      <link>https://mfaltys.github.io/redns_docs/configuration/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/configuration/index/</guid>
+      <description>Configuration TODO</description>
     </item>
     
     <item>
       <title>DNS based IOC</title>
-      <link>https://mfaltys.github.io/doic_docs/</link>
+      <link>https://mfaltys.github.io/redns_docs/index/</link>
       <pubDate>Tue, 08 Mar 2016 21:07:13 +0100</pubDate>
       
-      <guid>https://mfaltys.github.io/doic_docs/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://travis-ci.org/mfaltys/doic&#34;&gt;&lt;img src=&#34;https://travis-ci.org/mfaltys/doic.svg?branch=master&#34; alt=&#34;Build Status (Travis)&#34; /&gt;&lt;/a&gt;&lt;br /&gt;
-Doic is a DNS based indicator of compromise (IOC) written in go.  This tool is designed to be a very low
-overhead plug-and-play approach to implimenting an IOC for organizational or
-personal use.  If you want to track our day-to-day activities, check out our
-&lt;a href=&#34;https://trello.com/b/5KMHrR6L/project-requirement-clicitation-cybr4580&#34;&gt;trello board&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&#34;using-doic&#34;&gt;Using doic&lt;/h2&gt;
-
-&lt;h3 id=&#34;getting-precompiled-binaries&#34;&gt;Getting precompiled binaries&lt;/h3&gt;
-
-&lt;p&gt;This project pushes up a binary on every project commit and tag.
-You can find these binaries in the following locations (note we only pre compile
-for 64 bit linux architectures):&lt;br /&gt;
-&lt;a href=&#34;https://cryo.unixvoid.com/bin/doic/&#34;&gt;browse binaries&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://cryo.unixvoid.com/bin/doic/doic-latest-linux-amd64&#34;&gt;latest doic&lt;/a&gt;&lt;br /&gt;
-&lt;a href=&#34;https://cryo.unixvoid.com/bin/doic/doic_cli-latest-linux-amd64&#34;&gt;latest doic_cli&lt;/a&gt;&lt;/p&gt;
-
-&lt;h3 id=&#34;compiling-from-source&#34;&gt;Compiling from source&lt;/h3&gt;
-
-&lt;p&gt;Doic uses Make for compilation/testing.  Use the following commands to buid doic
-from source.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;First make sure you have golang installed and configured&lt;/li&gt;
-&lt;li&gt;To pull all dependencies use &lt;code&gt;make dependencies&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;To build dynamically use &lt;code&gt;make&lt;/code&gt; or &lt;code&gt;make doic&lt;/code&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The dynamically compiled binary will end up in the &lt;code&gt;bin/&lt;/code&gt; directory&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;To build statically use &lt;code&gt;make stat&lt;/code&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The statically compiled binary will end up in the &lt;code&gt;bin/&lt;/code&gt; directory&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;To build the cli use &lt;code&gt;make stat_cli&lt;/code&gt;
-
-&lt;ul&gt;
-&lt;li&gt;The portable binary will end up in the &lt;code&gt;bin/&lt;/code&gt; directory&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;To clean up all compiled binaries use &lt;code&gt;make clean&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <guid>https://mfaltys.github.io/redns_docs/index/</guid>
+      <description>Redns is a DNS based indicator of compromise (IOC) written in go. This tool is designed to be a very low overhead plug-and-play approach to implimenting an IOC for organizational or personal use. If you want to track our day-to-day activities, check out our trello board.
+Using redns Getting precompiled binaries This project pushes up a binary on every project commit and tag. You can find these binaries in the following locations (note we only pre compile for 64 bit linux architectures):</description>
     </item>
     
   </channel>
