@@ -50,17 +50,17 @@ canonifyurls = true
 
 [[menu.main]]
 	name   = "Configuration"
-	url    = "configuration"
+	url    = "configuration/index"
 	weight = 10
 
 [[menu.main]]
 	name   = "Milestone 1"
-	url    = "milestone.1"
+	url    = "milestone.1/index"
 	weight = 10
 
 [[menu.main]]
 	name   = "Milestone 2"
-	url    = "milestone.2"
+	url    = "milestone.2/index"
 	weight = 10
 
 [blackfriday]
