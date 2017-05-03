@@ -36,6 +36,20 @@ Listens on TCP:53. Redis DB: The redis db (listens on TCP:6379) containing the f
     </item>
     
     <item>
+      <title>Milestone 3</title>
+      <link>https://mfaltys.github.io/redns_docs/milestone.3/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/milestone.3/index/</guid>
+      <description>Activity Diagram Add new blacklisted domain  As an end-user, I want non-intrusive malware indicators so I am not distracted.
+  Track client traffic  As an organizational manager, I want an indicator of compromise(IOC) deployed rapidly to cut down on man-hour costs.
+  User story relization The following resources will be used in demoing redns and the redns_cli:
+ browse redns resources
+ redns
+ redns_cli</description>
+    </item>
+    
+    <item>
       <title>Redns Configuration</title>
       <link>https://mfaltys.github.io/redns_docs/configuration/index/</link>
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>

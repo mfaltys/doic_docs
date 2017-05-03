@@ -12,6 +12,11 @@
   </url>
   
   <url>
+    <loc>https://mfaltys.github.io/redns_docs/milestone.3/index/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mfaltys.github.io/redns_docs/configuration/index/</loc>
     <lastmod>2016-03-09T00:11:02+01:00</lastmod>
   </url>
@@ -40,6 +45,12 @@
   
   <url>
     <loc>https://mfaltys.github.io/redns_docs/milestone.2/</loc>
+    <lastmod>2016-03-09T00:11:02+01:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mfaltys.github.io/redns_docs/milestone.3/</loc>
     <lastmod>2016-03-09T00:11:02+01:00</lastmod>
     <priority>0</priority>
   </url>

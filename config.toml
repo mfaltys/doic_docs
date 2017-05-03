@@ -63,6 +63,11 @@ canonifyurls = true
 	url    = "milestone.2/index"
 	weight = 10
 
+[[menu.main]]
+	name   = "Milestone 3"
+	url    = "milestone.3/index"
+	weight = 10
+
 [blackfriday]
 	smartypants	= true
 	fractions = true

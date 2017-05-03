@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Milestone.3s on redns-docs</title>
+    <link>https://mfaltys.github.io/redns_docs/milestone.3/</link>
+    <description>Recent content in Milestone.3s on redns-docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Released under the MIT license</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
+    
+	<atom:link href="https://mfaltys.github.io/redns_docs/milestone.3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Milestone 3</title>
+      <link>https://mfaltys.github.io/redns_docs/milestone.3/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/milestone.3/index/</guid>
+      <description>Activity Diagram Add new blacklisted domain  As an end-user, I want non-intrusive malware indicators so I am not distracted.
+  Track client traffic  As an organizational manager, I want an indicator of compromise(IOC) deployed rapidly to cut down on man-hour costs.
+  User story relization The following resources will be used in demoing redns and the redns_cli:
+ browse redns resources
+ redns
+ redns_cli</description>
+    </item>
+    
+  </channel>
+</rss>
