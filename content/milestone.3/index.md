@@ -43,4 +43,4 @@ The initial release contains the base DNS IOC and standalone CLI tool for managi
 
 
 ## Presentation
-TODO: add final presentation slides/info/etc
+- [Slides](https://s3.amazonaws.com/unixvoid-blog/redns_final.pdf)  
