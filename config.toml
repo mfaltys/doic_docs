@@ -15,7 +15,7 @@ canonifyurls = true
 	provider = "GitHub"
 	repo_url = "https://github.com/mfaltys/redns"
 
-	version = "v0.0.1b"
+	version = "v0.95.0"
 	logo = "img/logo.png"
 	favicon = ""
 
