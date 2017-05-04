@@ -2,6 +2,8 @@ all: build
 
 build:
 	hugo
+	mv public/ docs/
+
 themes:
 	mkdir -p themes/
 	git clone https://github.com/digitalcraftsman/hugo-material-docs
@@ -15,3 +17,4 @@ remotedev:
 
 clean:
 	rm -rf public/
+	rm -rf docs/
