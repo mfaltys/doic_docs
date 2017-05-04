@@ -44,3 +44,10 @@ The initial release contains the base DNS IOC and standalone CLI tool for managi
 
 ## Presentation
 - [Slides](https://s3.amazonaws.com/unixvoid-blog/redns_final.pdf)  
+- [Github](https://github.com/mfaltys/redns)
+- [Github Docs](https://github.com/mfaltys/redns_docs)
+- [Travis CI](https://travis-ci.org/mfaltys/redns)
+- [Trello](https://trello.com/b/5KMHrR6L/redns).  
+- [Binaries](https://cryo.unixvoid.com/redns)
+- [Github Release](https://github.com/mfaltys/redns/releases/tag/v0.95.0)
+- [Docs](https://mfaltys.github.io/redns_docs)
