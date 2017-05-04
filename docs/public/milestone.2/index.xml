@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Milestone.2s on redns-docs</title>
+    <link>https://mfaltys.github.io/redns_docs/milestone.2/</link>
+    <description>Recent content in Milestone.2s on redns-docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Released under the MIT license</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
+    
+	<atom:link href="https://mfaltys.github.io/redns_docs/milestone.2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Milestone 2</title>
+      <link>https://mfaltys.github.io/redns_docs/milestone.2/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/milestone.2/index/</guid>
+      <description>Architectural Diagram Components The following components are used in this tool:
+ DOIC: The main tool itself, comprised of components to parse the DNS request recieved, check the requested domain against the malicious domain list (in redis), and resolving the request upstream if it is deemed safe.
+Listens on TCP:53. Redis DB: The redis db (listens on TCP:6379) containing the following data sets:
+ blacklist:domain: contains a redis set of blacklisted domains.</description>
+    </item>
+    
+  </channel>
+</rss>

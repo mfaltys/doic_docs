@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Milestone.1s on redns-docs</title>
+    <link>https://mfaltys.github.io/redns_docs/milestone.1/</link>
+    <description>Recent content in Milestone.1s on redns-docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Released under the MIT license</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
+    
+	<atom:link href="https://mfaltys.github.io/redns_docs/milestone.1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Milestone 1</title>
+      <link>https://mfaltys.github.io/redns_docs/milestone.1/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/milestone.1/index/</guid>
+      <description>Executive Summary Many industry malware detection tools (used in the workplace or for personal use) are either platform specific, intrusive, or high overhead and need to be maintained. Redns is a malware detection tool which plans to overcome these problems in a small, easy to deploy package.
+Goals and Objectives Redns plans to combat the problems outined in the executive summary in the following ways:
+ Easy to impliment If its run as the main DNS server it can detect malicious content without having to run any client-side software.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+  
+  
+  
+  
+   <html class="no-js"> 
+
+  <head lang="en-us">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=10" />
+    <title>DNS based IOC - redns-docs</title>
+    <meta name="generator" content="Hugo 0.20.2" />
+
+    
+    <meta name="description" content="Redns documentation.">
+    
+    <link rel="canonical" href="https://mfaltys.github.io/redns_docs/index/">
+    
+    <meta name="author" content="Matthew Faltys">
+    
+
+    <meta property="og:url" content="https://mfaltys.github.io/redns_docs/index/">
+    <meta property="og:title" content="redns-docs">
+    <meta property="og:image" content="https://mfaltys.github.io/redns_docs/img/logo.png">
+    <meta name="apple-mobile-web-app-title" content="redns-docs">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://mfaltys.github.io/redns_docs/images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://mfaltys.github.io/redns_docs/images/favicon.ico">
+
+    <style>
+      @font-face {
+        font-family: 'Icon';
+        src: url('https://mfaltys.github.io/redns_docs/fonts/icon.eot');
+        src: url('https://mfaltys.github.io/redns_docs/fonts/icon.eot')
+               format('embedded-opentype'),
+             url('https://mfaltys.github.io/redns_docs/fonts/icon.woff')
+               format('woff'),
+             url('https://mfaltys.github.io/redns_docs/fonts/icon.ttf')
+               format('truetype'),
+             url('https://mfaltys.github.io/redns_docs/fonts/icon.svg')
+               format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
+
+    <link rel="stylesheet" href="https://mfaltys.github.io/redns_docs/stylesheets/application.css">
+    <link rel="stylesheet" href="https://mfaltys.github.io/redns_docs/stylesheets/temporary.css">
+    <link rel="stylesheet" href="https://mfaltys.github.io/redns_docs/stylesheets/palettes.css">
+    <link rel="stylesheet" href="https://mfaltys.github.io/redns_docs/stylesheets/highlight/highlight.css">
+
+    
+    
+    
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source%20Sans%20Pro:400,700|Source&#43;Code&#43;Pro">
+    <style>
+      body, input {
+        font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+      }
+      pre, code {
+        font-family: 'Source Code Pro', 'Courier New', 'Courier', monospace;
+      }
+    </style>
+
+    
+    <script src="https://mfaltys.github.io/redns_docs/javascripts/modernizr.js"></script>
+
+    
+
+  </head>
+  <body class="palette-primary-indigo palette-accent-teal">
+
+
+
+	
+	
+
+
+<div class="backdrop">
+	<div class="backdrop-paper"></div>
+</div>
+
+<input class="toggle" type="checkbox" id="toggle-drawer">
+<input class="toggle" type="checkbox" id="toggle-search">
+<label class="toggle-button overlay" for="toggle-drawer"></label>
+
+<header class="header">
+	<nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        DNS based IOC
+      </div>
+    </div>
+
+    
+    <div class="button button-twitter" role="button" aria-label="Twitter">
+       <a href="https://twitter.com/thefaltyone" title="@thefaltyone on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+    </div>
+    
+
+    
+    <div class="button button-github" role="button" aria-label="GitHub">
+      <a href="https://github.com/mfaltys" title="@mfaltys on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+    </div>
+    
+    
+        
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main class="main">
+	<div class="drawer">
+		<nav aria-label="Navigation">
+  <a href="https://github.com/mfaltys/redns" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="https://mfaltys.github.io/redns_docs/img/logo.png">
+        </div>
+      
+      <div class="name">
+        <strong>redns-docs <span class="version">v0.0.1b</span></strong>
+        
+          <br>
+          mfaltys/redns
+        
+      </div>
+    </div>
+  </a>
+
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            <a href="https://github.com/mfaltys/redns/archive/master.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/mfaltys/redns/stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+
+      <div class="toc">
+        
+        <ul>
+          
+
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Configuration" href="https://mfaltys.github.io/redns_docs/configuration/index">
+	
+	Configuration
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Milestone 1" href="https://mfaltys.github.io/redns_docs/milestone.1/index">
+	
+	Milestone 1
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Milestone 2" href="https://mfaltys.github.io/redns_docs/milestone.2/index">
+	
+	Milestone 2
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Milestone 3" href="https://mfaltys.github.io/redns_docs/milestone.3/index">
+	
+	Milestone 3
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Quickstart" href="https://mfaltys.github.io/redns_docs/quickstart/index">
+	
+	Quickstart
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Redns CLI commands" href="https://mfaltys.github.io/redns_docs/cli/index">
+	
+	Redns CLI commands
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Redns" href="https://mfaltys.github.io/redns_docs/">
+	
+	Redns
+</a>
+
+
+
+  
+</li>
+
+
+        </ul>
+        
+
+        
+        <hr>
+        <span class="section">The author</span>
+        
+        <ul>
+          
+          <li>
+            <a href="https://twitter.com/thefaltyone" target="_blank" title="@thefaltyone on Twitter">
+              @thefaltyone on Twitter
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="https://github.com/mfaltys" target="_blank" title="@mfaltys on GitHub">
+              @mfaltys on GitHub
+            </a>
+          </li>
+          
+
+          
+          <li>
+            <a href="mailto:mfaltys@gmail.com" title="Email of mfaltys@gmail.com">
+              Contact via email
+            </a>
+          </li>
+          
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+
+	</div>
+
+	<article class="article">
+		<div class="wrapper">
+			<h1>DNS based IOC </h1>
+
+			
+
+<p><a href="https://travis-ci.org/mfaltys/redns"><img src="https://travis-ci.org/mfaltys/redns.svg?branch=master" alt="Build Status (Travis)" /></a><br />
+Redns is a DNS based indicator of compromise (IOC) written in go.  This tool is designed to be a very low
+overhead plug-and-play approach to implimenting an IOC for organizational or
+personal use.  If you want to track our day-to-day activities, check out our
+<a href="https://trello.com/b/5KMHrR6L/project-requirement-clicitation-cybr4580">trello board</a>.</p>
+
+<h2 id="using-redns">Using redns</h2>
+
+<h3 id="getting-precompiled-binaries">Getting precompiled binaries</h3>
+
+<p>This project pushes up a binary on every project commit and tag.
+You can find these binaries in the following locations (note we only pre compile
+for 64 bit linux architectures):<br />
+<a href="https://cryo.unixvoid.com/bin/redns/">browse binaries</a><br />
+<a href="https://cryo.unixvoid.com/bin/redns/redns-latest-linux-amd64">latest redns</a><br />
+<a href="https://cryo.unixvoid.com/bin/redns/redns_cli-latest-linux-amd64">latest redns_cli</a></p>
+
+<h3 id="compiling-from-source">Compiling from source</h3>
+
+<p>Redns uses Make for compilation/testing.  Use the following commands to buid redns
+from source.</p>
+
+<ul>
+<li>First make sure you have golang installed and configured</li>
+<li>To pull all dependencies use <code>make dependencies</code></li>
+<li>To build dynamically use <code>make</code> or <code>make redns</code>
+
+<ul>
+<li>The dynamically compiled binary will end up in the <code>bin/</code> directory</li>
+</ul></li>
+<li>To build statically use <code>make stat</code>
+
+<ul>
+<li>The statically compiled binary will end up in the <code>bin/</code> directory</li>
+</ul></li>
+<li>To build the cli use <code>make stat_cli</code>
+
+<ul>
+<li>The portable binary will end up in the <code>bin/</code> directory</li>
+</ul></li>
+<li>To clean up all compiled binaries use <code>make clean</code></li>
+</ul>
+
+
+			<aside class="copyright" role="note">
+				
+				&copy; 2017 Released under the MIT license &ndash;
+				
+				Documentation built with
+				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+				using the
+				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+			</aside>
+
+			<footer class="footer">
+				
+
+<nav class="pagination" aria-label="Footer">
+  <div class="previous">
+  
+      <a href="https://mfaltys.github.io/redns_docs/quickstart/index/" title="Redns Quickstart/Configuration">
+        <span class="direction">
+          Previous
+        </span>
+        <div class="page">
+          <div class="button button-previous" role="button" aria-label="Previous">
+            <i class="icon icon-back"></i>
+          </div>
+          <div class="stretch">
+            <div class="title">
+              Redns Quickstart/Configuration
+            </div>
+          </div>
+        </div>
+      </a>
+  
+  </div>
+
+  <div class="next">
+  
+  </div>
+</nav>
+
+
+
+
+
+			</footer>
+		</div>
+	</article>
+
+	<div class="results" role="status" aria-live="polite">
+		<div class="scrollable">
+			<div class="wrapper">
+				<div class="meta"></div>
+				<div class="list"></div>
+			</div>
+		</div>
+	</div>
+</main>
+
+    <script>
+    
+      var base_url = 'https:\/\/mfaltys.github.io\/redns_docs\/';
+      var repo_id  = 'mfaltys\/redns';
+    
+    </script>
+
+    <script src="https://mfaltys.github.io/redns_docs/javascripts/application.js"></script>
+    
+
+    <script>
+      /* Add headers to scrollspy */
+      var headers   = document.getElementsByTagName("h2");
+      var scrollspy = document.getElementById('scrollspy');
+
+      if(scrollspy) {
+        if(headers.length > 0) {
+          for(var i = 0; i < headers.length; i++) {
+            var li = document.createElement("li");
+            li.setAttribute("class", "anchor");
+
+            var a  = document.createElement("a");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", headers[i].innerHTML);
+            a.innerHTML = headers[i].innerHTML;
+
+            li.appendChild(a)
+            scrollspy.appendChild(li);
+          }
+        } else {
+          scrollspy.parentElement.removeChild(scrollspy)
+        }
+
+
+        /* Add permanent link next to the headers */
+        var headers = document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+
+        for(var i = 0; i < headers.length; i++) {
+            var a = document.createElement("a");
+            a.setAttribute("class", "headerlink");
+            a.setAttribute("href", "#" + headers[i].id);
+            a.setAttribute("title", "Permanent link")
+            a.innerHTML = "#";
+            headers[i].appendChild(a);
+        }
+      }
+    </script>
+
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>
+

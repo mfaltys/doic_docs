@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>redns-docs</title>
+    <link>https://mfaltys.github.io/redns_docs/</link>
+    <description>Recent content on redns-docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Released under the MIT license</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
+    
+	<atom:link href="https://mfaltys.github.io/redns_docs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Milestone 1</title>
+      <link>https://mfaltys.github.io/redns_docs/milestone.1/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/milestone.1/index/</guid>
+      <description>Executive Summary Many industry malware detection tools (used in the workplace or for personal use) are either platform specific, intrusive, or high overhead and need to be maintained. Redns is a malware detection tool which plans to overcome these problems in a small, easy to deploy package.
+Goals and Objectives Redns plans to combat the problems outined in the executive summary in the following ways:
+ Easy to impliment If its run as the main DNS server it can detect malicious content without having to run any client-side software.</description>
+    </item>
+    
+    <item>
+      <title>Milestone 2</title>
+      <link>https://mfaltys.github.io/redns_docs/milestone.2/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/milestone.2/index/</guid>
+      <description>Architectural Diagram Components The following components are used in this tool:
+ DOIC: The main tool itself, comprised of components to parse the DNS request recieved, check the requested domain against the malicious domain list (in redis), and resolving the request upstream if it is deemed safe.
+Listens on TCP:53. Redis DB: The redis db (listens on TCP:6379) containing the following data sets:
+ blacklist:domain: contains a redis set of blacklisted domains.</description>
+    </item>
+    
+    <item>
+      <title>Milestone 3</title>
+      <link>https://mfaltys.github.io/redns_docs/milestone.3/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/milestone.3/index/</guid>
+      <description>Activity Diagram Add new blacklisted domain  As an end-user, I want non-intrusive malware indicators so I am not distracted.
+  Track client traffic  As an organizational manager, I want an indicator of compromise(IOC) deployed rapidly to cut down on man-hour costs.
+  User story relization For questions about specific user stories, please see the trello page.
+Any trello card associated with a user story has linked commits/branches attached.</description>
+    </item>
+    
+    <item>
+      <title>Redns CLI</title>
+      <link>https://mfaltys.github.io/redns_docs/cli/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/cli/index/</guid>
+      <description>CLI usage Redns ships with a command line tool to access a list of client, access a clients history, and add/remove malicious domains on the fly. The following is syntax on this tool.
+Viewing attached clients Any client that connects to redns is logged in the redis database. The command for this is view.
+ Example command: ./redns_cli list Example output:
+  DEBUG: 2017/05/04 05:05:31 redns_cli.go:35: connection to redis succeeded.</description>
+    </item>
+    
+    <item>
+      <title>Redns Configuration</title>
+      <link>https://mfaltys.github.io/redns_docs/configuration/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/configuration/index/</guid>
+      <description>Configuration Redns ships with pretty sane defaults, but many attributes are configurable:
+[redns] loglevel = &amp;quot;debug&amp;quot; dnsport = 53 upstreamdns = &amp;quot;8.8.8.8:53&amp;quot; bootstrapdelay = 1 wildcardsubdomain = true [redirect] redirectport = 80 useredirect = true redirectsite = &amp;quot;&amp;quot; redirectindex = &amp;quot;deps/static/&amp;quot; [redis] host = &amp;quot;localhost:6379&amp;quot; password = &amp;quot;&amp;quot;   [redns]
+ loglevel: The verbosity of logs. acceptable fields are &amp;lsquo;info&amp;rsquo;, &amp;lsquo;debug&amp;rsquo;, and &amp;lsquo;error&amp;rsquo;. dnsport: The port the DNS server will bind to.</description>
+    </item>
+    
+    <item>
+      <title>Redns Quickstart/Configuration</title>
+      <link>https://mfaltys.github.io/redns_docs/quickstart/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/quickstart/index/</guid>
+      <description>Quickstart The easiest way to get started quickly is to grab one of our pre-built binaries or containers.
+You will also need redis to be populated with blacklisted domains. See the Redns CLI Commands page for help with this, or just run the following from the root of the project:
+make generate_domain_list ./domains  Rkt container The prefered and fastest way to get on your feet is to grab our public rkt container.</description>
+    </item>
+    
+    <item>
+      <title>DNS based IOC</title>
+      <link>https://mfaltys.github.io/redns_docs/index/</link>
+      <pubDate>Tue, 08 Mar 2016 21:07:13 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/index/</guid>
+      <description>Redns is a DNS based indicator of compromise (IOC) written in go. This tool is designed to be a very low overhead plug-and-play approach to implimenting an IOC for organizational or personal use. If you want to track our day-to-day activities, check out our trello board.
+Using redns Getting precompiled binaries This project pushes up a binary on every project commit and tag. You can find these binaries in the following locations (note we only pre compile for 64 bit linux architectures):</description>
+    </item>
+    
+  </channel>
+</rss>

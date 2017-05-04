@@ -49,8 +49,18 @@ canonifyurls = true
 	weight = 0
 
 [[menu.main]]
+	name   = "Quickstart"
+	url    = "quickstart/index"
+	weight = 10
+
+[[menu.main]]
 	name   = "Configuration"
 	url    = "configuration/index"
+	weight = 10
+
+[[menu.main]]
+	name   = "Redns CLI commands"
+	url    = "cli/index"
 	weight = 10
 
 [[menu.main]]

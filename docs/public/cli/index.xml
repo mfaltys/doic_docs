@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clis on redns-docs</title>
+    <link>https://mfaltys.github.io/redns_docs/cli/</link>
+    <description>Recent content in Clis on redns-docs</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Released under the MIT license</copyright>
+    <lastBuildDate>Wed, 09 Mar 2016 00:11:02 +0100</lastBuildDate>
+    
+	<atom:link href="https://mfaltys.github.io/redns_docs/cli/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Redns CLI</title>
+      <link>https://mfaltys.github.io/redns_docs/cli/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/cli/index/</guid>
+      <description>CLI usage Redns ships with a command line tool to access a list of client, access a clients history, and add/remove malicious domains on the fly. The following is syntax on this tool.
+Viewing attached clients Any client that connects to redns is logged in the redis database. The command for this is view.
+ Example command: ./redns_cli list Example output:
+  DEBUG: 2017/05/04 05:05:31 redns_cli.go:35: connection to redis succeeded.</description>
+    </item>
+    
+  </channel>
+</rss>
