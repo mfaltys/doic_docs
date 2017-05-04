@@ -256,6 +256,42 @@
 
 
 
+<a  title="Quickstart" href="https://mfaltys.github.io/redns_docs/quickstart/index">
+	
+	Quickstart
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
+<a  title="Redns CLI commands" href="https://mfaltys.github.io/redns_docs/cli/index">
+	
+	Redns CLI commands
+</a>
+
+
+
+  
+</li>
+
+
+
+<li>
+  
+    
+
+
+
 <a  title="Redns" href="https://mfaltys.github.io/redns_docs/">
 	
 	Redns
@@ -315,7 +351,64 @@
 
 <h2 id="configuration">Configuration</h2>
 
-<p>TODO</p>
+<p>Redns ships with pretty sane defaults, but many attributes are configurable:</p>
+
+<pre><code>[redns]
+  loglevel          = &quot;debug&quot;
+  dnsport           = 53
+  upstreamdns       = &quot;8.8.8.8:53&quot;
+  bootstrapdelay    = 1
+  wildcardsubdomain = true
+
+[redirect]
+  redirectport      = 80
+  useredirect       = true
+  redirectsite      = &quot;&quot;
+  redirectindex     = &quot;deps/static/&quot;
+
+[redis]
+  host              = &quot;localhost:6379&quot;
+  password          = &quot;&quot;
+</code></pre>
+
+<ul>
+<li><p><code>[redns]</code></p>
+
+<ul>
+<li><code>loglevel</code>: The verbosity of logs. acceptable fields are &lsquo;info&rsquo;, &lsquo;debug&rsquo;,
+and &lsquo;error&rsquo;.</li>
+<li><code>dnsport</code>: The port the DNS server will bind to.</li>
+<li><code>upstreamdns</code>: The upstream DNS server to use, the default is google&rsquo;s
+public DNS server but you can use any. Syntax is <code>ip</code>:<code>port</code></li>
+<li><code>bootstrapdelay</code>: A delay (in seconds) when redns starts up. this is useful when running with
+redis, this will eliminate any race condition. Use <code>0</code> for no delay.</li>
+<li><code>wildcardsubdomain</code>: Whether or not to use wildcard subdomains. For instance
+if the domain <code>yahoo.com</code> is blacklisted in the database, the domain
+<code>mail.yahoo.com</code> will also be blacklisted when the value is set to true.
+Use either <code>true</code> or <code>false</code> (boolean).</li>
+</ul></li>
+
+<li><p><code>redirect</code></p>
+
+<ul>
+<li><code>redirectport</code>: If using site redirection, redns will bind to this port and
+host the custom redirection page.</li>
+<li><code>useredirect</code>: Boolean to either use the site redirection feature or not. If
+set to false, clients DNS requests will be returned <code>RCODE3/NONEXIST</code> in case of a
+malicious site.</li>
+<li><code>redirectsite</code>: A custom site to redirect clients to.  If you have an
+existing warning site, set <strong>the IP</strong> here.  If this field is blank, redns
+will host a webpage for this.</li>
+<li><code>redirectindex</code>: Path to the static redirection page.</li>
+</ul></li>
+
+<li><p><code>redis</code>:</p>
+
+<ul>
+<li><code>host</code>: Host where redis is listening. Syntax is <code>hostname/IP</code>:<code>port</code></li>
+<li><code>password</code>: The password to redis if it exists</li>
+</ul></li>
+</ul>
 
 
 			<aside class="copyright" role="note">
@@ -334,7 +427,7 @@
 <nav class="pagination" aria-label="Footer">
   <div class="previous">
   
-      <a href="https://mfaltys.github.io/redns_docs/milestone.3/index/" title="Milestone 3">
+      <a href="https://mfaltys.github.io/redns_docs/cli/index/" title="Redns CLI">
         <span class="direction">
           Previous
         </span>
@@ -344,7 +437,7 @@
           </div>
           <div class="stretch">
             <div class="title">
-              Milestone 3
+              Redns CLI
             </div>
           </div>
         </div>
@@ -354,14 +447,14 @@
 
   <div class="next">
   
-      <a href="https://mfaltys.github.io/redns_docs/index/" title="DNS based IOC">
+      <a href="https://mfaltys.github.io/redns_docs/quickstart/index/" title="Redns Quickstart/Configuration">
         <span class="direction">
           Next
         </span>
         <div class="page">
           <div class="stretch">
             <div class="title">
-              DNS based IOC
+              Redns Quickstart/Configuration
             </div>
           </div>
           <div class="button button-next" role="button" aria-label="Next">

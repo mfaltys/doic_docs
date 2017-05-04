@@ -2,7 +2,7 @@ all: build
 
 build:
 	hugo
-	mv public/ docs/
+	mv public docs
 
 themes:
 	mkdir -p themes/

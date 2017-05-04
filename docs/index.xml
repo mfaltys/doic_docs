@@ -43,10 +43,20 @@ Listens on TCP:53. Redis DB: The redis db (listens on TCP:6379) containing the f
       <guid>https://mfaltys.github.io/redns_docs/milestone.3/index/</guid>
       <description>Activity Diagram Add new blacklisted domain  As an end-user, I want non-intrusive malware indicators so I am not distracted.
   Track client traffic  As an organizational manager, I want an indicator of compromise(IOC) deployed rapidly to cut down on man-hour costs.
-  User story relization The following resources will be used in demoing redns and the redns_cli:
- browse redns resources
- redns
- redns_cli</description>
+  User story relization For questions about specific user stories, please see the trello page.
+Any trello card associated with a user story has linked commits/branches attached.</description>
+    </item>
+    
+    <item>
+      <title>Redns CLI</title>
+      <link>https://mfaltys.github.io/redns_docs/cli/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/cli/index/</guid>
+      <description>CLI usage Redns ships with a command line tool to access a list of client, access a clients history, and add/remove malicious domains on the fly. The following is syntax on this tool.
+Viewing attached clients Any client that connects to redns is logged in the redis database. The command for this is view.
+ Example command: ./redns_cli list Example output:
+  DEBUG: 2017/05/04 05:05:31 redns_cli.go:35: connection to redis succeeded.</description>
     </item>
     
     <item>
@@ -55,7 +65,20 @@ Listens on TCP:53. Redis DB: The redis db (listens on TCP:6379) containing the f
       <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
       
       <guid>https://mfaltys.github.io/redns_docs/configuration/index/</guid>
-      <description>Configuration TODO</description>
+      <description>Configuration Redns ships with pretty sane defaults, but many attributes are configurable:
+[redns] loglevel = &amp;quot;debug&amp;quot; dnsport = 53 upstreamdns = &amp;quot;8.8.8.8:53&amp;quot; bootstrapdelay = 1 wildcardsubdomain = true [redirect] redirectport = 80 useredirect = true redirectsite = &amp;quot;&amp;quot; redirectindex = &amp;quot;deps/static/&amp;quot; [redis] host = &amp;quot;localhost:6379&amp;quot; password = &amp;quot;&amp;quot;   [redns]
+ loglevel: The verbosity of logs. acceptable fields are &amp;lsquo;info&amp;rsquo;, &amp;lsquo;debug&amp;rsquo;, and &amp;lsquo;error&amp;rsquo;. dnsport: The port the DNS server will bind to.</description>
+    </item>
+    
+    <item>
+      <title>Redns Quickstart/Configuration</title>
+      <link>https://mfaltys.github.io/redns_docs/quickstart/index/</link>
+      <pubDate>Wed, 09 Mar 2016 00:11:02 +0100</pubDate>
+      
+      <guid>https://mfaltys.github.io/redns_docs/quickstart/index/</guid>
+      <description>Quickstart The easiest way to get started quickly is to grab one of our pre-built binaries or containers.
+You will also need redis to be populated with blacklisted domains. See the Redns CLI Commands page for help with this, or just run the following from the root of the project:
+make generate_domain_list ./domains  Rkt container The prefered and fastest way to get on your feet is to grab our public rkt container.</description>
     </item>
     
     <item>

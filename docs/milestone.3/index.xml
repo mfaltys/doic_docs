@@ -20,10 +20,8 @@
       <guid>https://mfaltys.github.io/redns_docs/milestone.3/index/</guid>
       <description>Activity Diagram Add new blacklisted domain  As an end-user, I want non-intrusive malware indicators so I am not distracted.
   Track client traffic  As an organizational manager, I want an indicator of compromise(IOC) deployed rapidly to cut down on man-hour costs.
-  User story relization The following resources will be used in demoing redns and the redns_cli:
- browse redns resources
- redns
- redns_cli</description>
+  User story relization For questions about specific user stories, please see the trello page.
+Any trello card associated with a user story has linked commits/branches attached.</description>
     </item>
     
   </channel>

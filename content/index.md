@@ -36,3 +36,6 @@ from source.
 - To build the cli use `make stat_cli`
   - The portable binary will end up in the `bin/` directory
 - To clean up all compiled binaries use `make clean`
+
+## Contributions
+Big shoutout to MLHale for the project name, turns out that was the hardest part.
